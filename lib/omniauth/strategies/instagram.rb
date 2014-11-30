@@ -6,7 +6,8 @@ module OmniAuth
       option :client_options, {
         :site => 'https://api.instagram.com',
         :authorize_url => 'https://api.instagram.com/oauth/authorize',
-        :token_url => 'https://api.instagram.com/oauth/access_token'
+        :token_url => 'https://api.instagram.com/oauth/access_token',
+        :proxy => ENV["https_proxy"]
       }
 
       def request_phase
